@@ -1,5 +1,7 @@
 .venv
 .idea
 haarcascade_frontalface_default.xml
+haarcascade_license_plate_rus_16stages.xml
+haarcascade_russian_plate_number.xml
 zapor.jpg
 plate.jpg
