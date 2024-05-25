@@ -1,6 +1,4 @@
 import cv2
-import numpy as np
-import matplotlib.pyplot as plt
 import pytesseract
 
 
@@ -8,12 +6,9 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 trained_face_data = cv2.CascadeClassifier('haarcascade_license_plate_rus_16stages.xml')
 
 def carplate_extract(image):
-
     carplate_rects = trained_face_data.detectMultiScale(image,scaleFactor=1.1, minNeighbors=5)
-
     for x,y,w,h in carplate_rects:
         carplate_img = image[y+15:y+h-10 ,x+15:x+w-20]
-
     return carplate_img
 
 def enlarge_img(image, scale_percent):
