@@ -1,7 +1,6 @@
 import cv2
 import pytesseract
 
-
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 trained_face_data = cv2.CascadeClassifier('haarcascade_license_plate_rus_16stages.xml')
 
